@@ -1,0 +1,16 @@
+import numpy as np
+from sklearn.linear_model import LinearRegression
+
+# Sample data
+X = np.array([[1, 2], [2, 3], [3, 4], [4, 5]])
+y = np.array([10, 15, 20, 25])
+
+# Create and train model
+model = LinearRegression()
+model.fit(X, y)
+
+# Prediction
+prediction = model.predict(np.array([[5, 6]]))
+
+# Display output
+print("Prediction for input [5, 6]:", prediction[0])
